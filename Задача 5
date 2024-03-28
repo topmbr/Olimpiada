@@ -1,0 +1,21 @@
+using System;
+using System.Text;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.OutputEncoding = Encoding.UTF8;
+        Console.InputEncoding = Encoding.UTF8;
+
+        int totalCost = 0;
+
+        for (int i = 1; i <= 20; i++)
+        {
+            int cost = (int)Math.Pow(2, i - 1);
+            totalCost += cost;
+        }
+
+        Console.WriteLine($"Загальна вартість 20 овець: {totalCost} копійок");
+    }
+}
