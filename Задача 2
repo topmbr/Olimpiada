@@ -1,0 +1,24 @@
+using System;
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Введіть чотиризначне число:");
+        int number = int.Parse(Console.ReadLine());
+
+        if (number < 1000 || number > 9999)
+        {
+            Console.WriteLine("Число не є чотиризначним!");
+            return;
+        }
+
+        int sum = 0;
+        while (number > 0)
+        {
+            sum += number % 10;
+            number /= 10;
+        }
+
+        Console.WriteLine($"Сума цифр числа: {sum}");
+    }
+}
