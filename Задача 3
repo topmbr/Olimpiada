@@ -1,0 +1,22 @@
+using System;
+using System.Text;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.OutputEncoding = Encoding.UTF8;
+        Console.InputEncoding = Encoding.UTF8;
+
+        Console.WriteLine("Введіть суму грошей, відсоткову ставку та кількість років через пробіл:");
+        string[] input = Console.ReadLine().Split(' ');
+        double S = double.Parse(input[0]);
+        double P = double.Parse(input[1]) / 100; // Переводимо відсоткову ставку у десятковий формат
+        int N = int.Parse(input[2]);
+
+        int finalAmount = (int)(S * Math.Pow(1 + P, N));
+
+        Console.WriteLine( finalAmount);
+
+    }
+}
